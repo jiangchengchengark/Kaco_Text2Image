@@ -1,0 +1,6 @@
+tool_name: Kaco_Text2Image
+version: 1.0.0.test
+description: Text to Image Generation using comfyui
+params:
+  - port: 8000
+  - server_url: http://localhost:6006    #generate image server url
