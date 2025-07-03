@@ -1,4 +1,5 @@
 print("[Kaco_Text2Image] ✅ client.py loaded.")
+
 import requests
 import base64 
 import os 
@@ -9,7 +10,8 @@ import uuid
 #项目根目录
 PROJECT_ROOT=os.path.dirname(os.path.abspath(__file__))
 SAVE_DIR=os.path.join(PROJECT_ROOT,"static/images")
-from server import LOCAL_URL_PREFIX, SEVER_URL
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from Kaco_Text2Image.server import LOCAL_URL_PREFIX, SEVER_URL
 os.makedirs(SAVE_DIR, exist_ok=True)
 def get_image(prompt:str):
     """
